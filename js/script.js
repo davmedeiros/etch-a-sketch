@@ -1,7 +1,7 @@
 main();
 
 function main() {
-  console.log(createGrid());
+  createGrid();
   startNewSketch();
 }
 
@@ -21,7 +21,11 @@ function paintSquare() {
   const squares = document.querySelectorAll('.square');
   squares.forEach(square => {
     square.addEventListener('mouseover', (e) => {
-      e.target.classList.add('painted');
+      // e.target.classList.add('painted');
+      randomRed = Math.random() * 255;
+      randomGreen = Math.random() * 255;
+      randomBlue = Math.random() * 255;
+      e.target.style.backgroundColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
     });
   });
 }
