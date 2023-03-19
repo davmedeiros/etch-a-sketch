@@ -34,6 +34,14 @@ function startNewSketch() {
       alert('Invalid: Enter an integer lower than 100');
       return 1;
     }
+    removeGrid();
     createGrid(input);
+  });
+}
+
+function removeGrid() {
+  const grid = document.querySelectorAll('.square');
+  grid.forEach(square => {
+    square.remove();
   });
 }
