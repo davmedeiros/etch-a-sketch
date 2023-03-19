@@ -8,9 +8,12 @@ function main() {
 function createGrid(rowSize = 16) {
   const container = document.querySelector('#container');
   gridSize = rowSize ** 2;
+  squareSize = container.offsetWidth / rowSize;
   for (let i = 0; i < gridSize; i++) {
     const square = document.createElement('div');
     square.classList.add('square');
+    square.style.width = `${squareSize}px`;
+    square.style.height = `${squareSize}px`;
     container.appendChild(square);
   }
   paintSquare();
@@ -21,7 +24,6 @@ function paintSquare() {
   const squares = document.querySelectorAll('.square');
   squares.forEach(square => {
     square.addEventListener('mouseover', (e) => {
-      // e.target.classList.add('painted');
       randomRed = Math.random() * 255;
       randomGreen = Math.random() * 255;
       randomBlue = Math.random() * 255;

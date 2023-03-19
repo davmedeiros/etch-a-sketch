@@ -12,13 +12,10 @@ body {
 }
 
 #container {
-  width: 960px;
+  width: 90vw;
+  height:90vw;
+  margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
-}
-
-.square {
-  height: 60px;
-  width: 60px;
   outline: 1px solid black;
 }
