@@ -2,6 +2,7 @@ main();
 
 function main() {
   console.log(createGrid());
+  paintSquare();
 }
 
 function createGrid(rowSize = 16) {
@@ -13,4 +14,13 @@ function createGrid(rowSize = 16) {
     container.appendChild(square);
   }
   return gridSize;
+}
+
+function paintSquare() {
+  const squares = document.querySelectorAll('.square');
+  squares.forEach(square => {
+    square.addEventListener('mouseover', (e) => {
+      e.target.classList.add('painted');
+    });
+  });
 }
