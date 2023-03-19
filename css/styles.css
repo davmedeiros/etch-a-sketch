@@ -2,6 +2,8 @@
 *::before
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,4 +15,10 @@ body {
   width: 960px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.square {
+  height: 60px;
+  width: 60px;
+  outline: 1px solid black;
 }
