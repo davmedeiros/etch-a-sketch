@@ -42,3 +42,18 @@ header button {
     border-radius: 25%;
     font-weight: bold;
 }
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#canvas {
+    width: 850px;
+    height: 850px;
+    background-color: white;
+    border: 8px solid var(--secondary-color);
+    border-radius: 8px;
+}
