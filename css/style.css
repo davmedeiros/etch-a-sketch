@@ -13,3 +13,19 @@
     --base-color: #FFF0F5;
     --accent-color: #FFDBAA;
 }
+
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--base-color);
+}
+
+header {
+    background-color: var(--main-color);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
