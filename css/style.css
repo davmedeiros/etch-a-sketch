@@ -56,4 +56,12 @@ main {
     background-color: white;
     border: 8px solid var(--secondary-color);
     border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.cell {
+    outline: 1px solid black;
 }
