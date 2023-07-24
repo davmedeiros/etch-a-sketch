@@ -16,6 +16,17 @@ function createNewCanvas(size) {
         cell.classList.add('cell');
         cell.style.height = `${cellSize}px`;
         cell.style.width = `${cellSize}px`;
+        cell.addEventListener("dragstart", (e) => {
+            e.preventDefault();
+        })
+        cell.addEventListener('mousedown', () => {
+            cell.classList.add('painted');
+        })
+        cell.addEventListener('mouseover', (e) => {
+            if (e.buttons === 1) {
+                cell.classList.add('painted');
+            }
+        })
         canvas.appendChild(cell);
     }
 }

@@ -62,6 +62,6 @@ main {
     align-items: flex-start;
 }
 
-.cell {
-    outline: 1px solid black;
+.cell.painted {
+    background-color: black;
 }
