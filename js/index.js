@@ -31,4 +31,14 @@ function createNewCanvas(size) {
     }
 }
 
-createNewCanvas(16);
+(() => {
+    createNewCanvas(16);
+    const newCanvasButton = document.querySelector('button.new-canvas');
+    newCanvasButton.addEventListener('click', () => {
+        let size = prompt(`What's the size from 1 to 100`);
+        while (size > 100 || size < 1) {
+            size = prompt('Invalid size! Enter a size from 1 to 100');
+        }
+        createNewCanvas(size);
+    })
+})();
