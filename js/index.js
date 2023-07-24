@@ -1,4 +1,12 @@
+function deleteCanvas() {
+    const grid = document.querySelectorAll('#canvas .cell');
+    grid.forEach(cell => {
+        cell.remove();
+    });
+}
+
 function createNewCanvas(size) {
+    deleteCanvas();
     const canvas = document.querySelector('#canvas');
     const numberOfCells = size * size;
     const cellSize = canvas.clientHeight / (size);
