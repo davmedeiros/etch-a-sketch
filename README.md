@@ -1,2 +1,1 @@
-# etch-a-sketch
-TOP - Etch A Sketch
+# TOP - Educational Project - Etch A Sketch
